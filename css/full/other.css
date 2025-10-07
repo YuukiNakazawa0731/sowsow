@@ -1,0 +1,230 @@
+@charset "UTF-8";
+/*
+sowsow
+other
+=====[rgb]=======
+ロゴ グリーン
+rgb(27, 255, 129)
+=================
+*/
+
+/*===[insert.php]===*/
+#insert-ol {
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000000b3;
+  cursor: pointer;
+}
+
+#insert-result-outer {
+  position: relative;
+  z-index: 2;
+  top: 20%;
+  left: 25%;
+  padding: 2%;
+  width: 50%;
+  text-align: center;
+  border: 0.3rem outset #1bff81;
+  border-radius: 0.5rem;
+  background-color: #ffffff;
+}
+
+#insert-title {
+  margin: 2% 0;
+  font-size: 1.8rem;
+  font-weight: bold;
+  text-shadow: 0.1rem 0.1rem 0.2rem #444444;
+}
+
+#insert-result {
+  margin: auto;
+  padding: 2%;
+  width: 90%;
+  text-align: left;
+  border: 0.2rem solid #1e1a1a;
+  background-color: #ffffff;
+}
+
+#insert-result-head {
+  display: flex;
+  margin: 1%;
+}
+
+#insert-result-user-outer {
+  display: flex;
+  align-items: center;
+}
+
+#insert-result-user {
+  margin: 0 2%;
+  width: auto;
+  white-space: nowrap;
+  font-weight: bold;
+}
+
+#insert-result-date {
+  margin: 1%;
+  font-size: 1.4rem;
+}
+
+#insert-result-message {
+  padding: 2%;
+  letter-spacing: 0.1rem;
+  text-align: left;
+  font-size: 1.8rem;
+}
+
+#insert-result-category {
+  margin: 2% 1%;
+  text-align: left;
+  font-size: 1.4rem;
+}
+
+#insert-nav-outer {
+  position: absolute;
+  bottom: -15%;
+  left: 0;
+  z-index: 2;
+  width: 100%;
+  text-align: center;
+}
+
+#insert-nav-txt {
+  letter-spacing: 0.2rem;
+  font-size: 1.8rem;
+  font-weight: bold;
+  text-shadow: 0.1rem 0.1rem 0.1rem #444444;
+  color: #ffffff;
+}
+
+#insert-err-txt {
+  letter-spacing: 0.2rem;
+  font-weight: bold;
+  color: #ff0000;
+}
+
+#return-main {
+  position: absolute;
+  bottom: -70%;
+  left: 0;
+  z-index: 2;
+  width: 100%;
+  text-align: center;
+}
+
+/*===[user_edit.php]===*/
+#edit-container {
+  position: relative;
+  z-index: 1;
+  margin: 0 5%;
+  width: 80%;
+}
+
+#edit-inner {
+  display: inline;
+  margin: 0 auto;
+}
+
+#account-list-head {
+  margin: auto;
+  width: 97%;
+  font-size: 2rem;
+  font-weight: bold;
+  text-shadow: 0.1rem 0.1rem 0.1rem #ffffff;
+}
+
+#head-no {
+  width: 10%;
+  text-align: center;
+}
+
+#head-id {
+  width: 50%;
+  text-align: center;
+}
+
+#head-admin {
+  width: 10%;
+  text-align: center;
+}
+
+#head-edit {
+  width: 14%;
+  text-align: center;
+  font-size: 1.8rem;
+}
+
+#head-delete {
+  width: 18%;
+  font-size: 1.8rem;
+}
+
+.account-result-list {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.account-result-form {
+  display: flex;
+  align-items: center;
+  margin: auto;
+  padding: 1%;
+  font-size: 1.8rem;
+}
+
+.account-no {
+  padding: 1% 0;
+  width: 10%;
+  text-align: center;
+  font-size: 1.8rem;
+  border: 0.2rem solid #1e1a1a;
+  background-color: #ffffff;
+}
+
+.account-id {
+  padding: 1% 2%;
+  width: 50%;
+  border: 0.2rem solid #1e1a1a;
+  background-color: #ffffff;
+}
+
+.account-admin {
+  padding: 1% 2%;
+  width: 12%;
+  text-align: center;
+  border: 0.2rem solid #1e1a1a;
+  background-color: #ffffff;
+}
+
+.admin-select {
+  padding: 1% 0;
+  text-align: center;
+  font-size: 2rem;
+}
+
+.admin-select option {
+  border: 0.2rem solid #1e1a1a;
+}
+
+.edit-btn {
+  margin-left: 4%;
+  width: 4%;
+  border: 0.3rem solid #000000;
+  box-shadow: 0.1rem 0.2rem 0.3rem rgb(68, 68, 68);
+  border-radius: 0.5rem;
+  background-color: #e4e4e4;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+.edit-btn:hover {
+  box-shadow: 0rem 0rem 0.1rem #444444;
+}
+
+.edit-icon {
+  display: block;
+  width: 100%;
+}

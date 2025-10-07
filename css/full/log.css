@@ -1,0 +1,320 @@
+@charset "UTF-8";
+/*
+sowsow
+log
+=====[rgb]=======
+ロゴ グリーン
+rgb(27, 255, 129)
+=================
+*/
+
+/*===[login.php]===*/
+/*[タイトル]*/
+#title-logo {
+  position: absolute;
+  top: 10%;
+  left: 8%;
+  display: none;
+  height: 50%;
+  width: 12%;
+  background-image: url(../../images/sowsow_logo.png);
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+/*[ログインフォーム]*/
+#login-form {
+  position: absolute;
+  opacity: 0;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  padding: 1% 0;
+  width: 30%;
+  text-align: center;
+  text-shadow: 0.1rem 0.1rem 0.2rem #ffffff;
+  box-shadow: 0 0 0.3rem 0.3rem #ffffff;
+  border-radius: 0.3rem;
+  background-color: #f0f0f0b3;
+}
+
+#login-form-inner {
+  width: 80%;
+}
+
+.login-list {
+  display: block;
+  margin-top: 5%;
+  text-align: center;
+  font-size: 1.4rem;
+}
+
+.login-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#login-id,
+#login-pass {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  appearance: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2% 3%;
+  margin: auto;
+  width: 60%;
+  font-size: 1.6rem;
+  border: 0.2rem solid #000000;
+  border-radius: 0.3rem;
+  background-color: #ffffff;
+}
+
+/*チェックボックス*/
+#pass-eye {
+  display: none;
+}
+
+#pass-eye-label {
+  position: absolute;
+  right: 28%;
+  width: 4%;
+}
+
+#pass-eye-img {
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#login-err {
+  padding: 3% 0 2%;
+  width: 100%;
+  text-align: center;
+  font-weight: bold;
+  color: #ff0000;
+}
+
+#login-submit {
+  margin: 10% auto 0;
+  width: 35%;
+}
+
+#signup-link-outer {
+  position: absolute;
+  opacity: 0;
+  bottom: 15%;
+  left: 30%;
+}
+
+/*=[新規登録フォーム]=*/
+#signup-ol {
+  position: fixed;
+  z-index: 0;
+  top: 0;
+  left: 0;
+  display: none;
+  width: 100%;
+  height: 100%;
+  background-color: #000000cc;
+  cursor: pointer;
+}
+
+#signup-form {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  padding: 1% 0;
+  width: 30%;
+  text-align: center;
+  text-shadow: 0.1rem 0.1rem 0.2rem #ffffff;
+  box-shadow: 0 0 0.3rem 0.3rem #ffffff;
+  border-radius: 0.3rem;
+  background-color: #f0f0f0b3;
+}
+
+#signup-title {
+  margin: 0 auto;
+  font-weight: bold;
+  border-bottom: 0.15rem double #1bff81;
+}
+
+.signup-nav {
+  padding: 2.5% 0;
+}
+
+.signup-list {
+  margin-top: 3.5%;
+  font-size: 1.4rem;
+}
+
+.signup-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#signup-id,
+#signup-pass {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  appearance: none;
+  display: flex;
+  padding: 2% 3%;
+  margin: auto;
+  width: 80%;
+  font-size: 1.6rem;
+  border: 0.2rem solid #000000;
+  border-radius: 0.3rem;
+  background-color: #ffffff;
+}
+
+/*チェックボックス*/
+#signup-pass-eye {
+  display: none;
+}
+
+#signup-pass-eye-label {
+  position: absolute;
+  right: 28%;
+  width: 4%;
+}
+
+#signup-pass-eye-img {
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#signup-submit {
+  margin: 15% auto 5%;
+}
+
+#signup-err {
+  padding: 3% 0 2%;
+  width: 100%;
+  text-align: center;
+  font-weight: bold;
+  color: #ff0000;
+}
+
+#login-link-outer {
+  position: absolute;
+  bottom: 15%;
+  left: 35%;
+  width: 30%;
+}
+
+/*===[signup_result.php]===*/
+#signup-result-ol {
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000000cc;
+}
+
+#signup-result-outer {
+  position: fixed;
+  z-index: 1;
+  top: 40%;
+  left: 30%;
+  padding: 1.5%;
+  width: 40%;
+  text-align: center;
+  text-shadow: 0.1rem 0.1rem 0.2rem #ffffff;
+  box-shadow: 0 0 0.3rem 0.3rem #ffffff;
+  border-radius: 0.15rem;
+  background-color: #f0f0f0b3;
+}
+
+#signup-result {
+  font-weight: 600;
+}
+
+/*===[=logout.php]===*/
+/*[ログアウトモーダル]*/
+#logout-container {
+  position: fixed;
+  z-index: 0;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000000b3;
+  cursor: pointer;
+}
+
+#logout-outer {
+  position: fixed;
+  z-index: 1;
+  top: 45%;
+  left: 27.5%;
+  width: 45%;
+  text-align: center;
+}
+
+#logout-center-line {
+  position: relative;
+  height: 0.1rem;
+  width: 0;
+  background-color: #ffffff;
+  transition: 1s ease;
+}
+/*spread_line*/
+#logout-center-line.line-spread {
+  transition: 1s ease;
+  width: 90%;
+}
+
+#logout-item-up {
+  position: absolute;
+  opacity: 0;
+  transform: translateY(0%);
+  top: 0;
+  left: 30%;
+  margin: 0 auto;
+  width: 40%;
+  font-size: 2.2rem;
+  color: #ffffff;
+}
+/*item_top_up*/
+#logout-item-up.item-up {
+  transition: 0.5s ease-in;
+  opacity: 1;
+  transform: translateY(-60%);
+}
+
+#logout-item-down {
+  position: absolute;
+  opacity: 0;
+  transform: translateY(0%);
+  top: 0;
+  left: 30%;
+  margin: 0 auto;
+  width: 40%;
+  letter-spacing: 0.3rem;
+  font-size: 2.4rem;
+  color: #ffffff;
+}
+/*item_bottom_down*/
+#logout-item-down.item-down {
+  transition: 0.5s ease-in;
+  opacity: 1;
+  transform: translateY(40%);
+}

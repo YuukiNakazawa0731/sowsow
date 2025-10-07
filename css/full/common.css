@@ -1,0 +1,407 @@
+@charset "UTF-8";
+/*
+sowsow
+commom
+=====[rgb]=======
+ロゴ グリーン
+rgb(27, 255, 129)
+=================
+*/
+
+/*===[デフォルトcss]===*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  outline: 0;
+  margin: 0;
+  padding: 0%;
+  line-height: normal; /*行間*/
+  letter-spacing: normal; /*文字間*/
+  border: none;
+  font-weight: normal;
+}
+
+html {
+  font-size: 62.5%; /*サイズリセット*/
+  font-family: "Arial Rounded MT Bold", "Hiragino Kaku Gothic ProN",
+    "ヒラギノ角ゴ ProN W3";
+}
+
+body {
+  display: block;
+  height: 100%;
+  font-size: 1.6em; /*フォントサイズ*/
+  font-weight: normal;
+}
+
+img {
+  display: block;
+  object-fit: cover;
+}
+
+a {
+  display: block;
+  text-decoration: none;
+  color: #000000;
+  cursor: pointer;
+}
+
+ol,
+ul {
+  list-style: none;
+  word-wrap: break-word;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+:hover {
+  transition: all 0.8s;
+}
+
+/*[main_wrapper(背景)]*/
+#main-wrapper {
+  position: fixed;
+  z-index: 0;
+  overflow: hidden;
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  background-image: url(../../images/mt.fuji.jpg);
+  background-size: cover;
+}
+/*ぼかし*/
+#main-wrapper:before {
+  position: absolute;
+  z-index: -1;
+  content: "";
+  top: -0.3rem;
+  left: -0.3rem;
+  right: -0.3rem;
+  bottom: -0.3rem;
+  background: inherit;
+  filter: blur(0.3rem);
+}
+
+/*===[ヘッダー]===*/
+header {
+  position: absolute;
+  opacity: 0;
+  z-index: 1;
+  top: -7%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 7%;
+  width: 100%;
+  background: linear-gradient(#1bff81, #dfffed);
+}
+
+/*モバイルメニュー非表示*/
+#menu-btn {
+  display: none;
+}
+
+#header-logo-outer {
+  margin-left: 2%;
+  width: 6%;
+}
+
+.header-icon {
+  width: 100%;
+}
+
+#login-mode {
+  margin: auto;
+  font-size: 1.8rem;
+  font-weight: bold;
+  text-shadow: 0.1rem 0.1rem 0.2rem #444444;
+}
+
+#welcome-user-outer {
+  display: flex;
+  justify-content: right;
+  align-items: baseline;
+  margin-right: 5%;
+  width: 30%;
+  word-break: break-all;
+  text-align: right;
+  font-size: 1.4rem;
+  text-shadow: 0.1rem 0.1rem 0.2rem #444444;
+}
+
+#welcome-user {
+  padding: 0 1%;
+  font-size: 1.8rem;
+  text-shadow: 0.1rem 0.1rem 0.2rem #444444;
+}
+
+/*===[サイドコンテンツ]===*/
+#side-container {
+  padding: 2% 0;
+  width: 20%;
+}
+
+/*モバイル版 非表示*/
+#side-container-m {
+  display: none;
+}
+
+.menu-close-btn {
+  display: none;
+}
+
+/*=[メニュー]=*/
+#menu-outer {
+  position: relative;
+  opacity: 0;
+  left: -20%;
+  width: 100%;
+}
+
+.menu-contents {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 2% auto;
+  padding: 3.5% 0;
+  width: 80%;
+  font-size: 2.4rem;
+  font-family: "Raleway", sans-serif;
+  border: 0.2rem solid #000000;
+  border-radius: 0.2rem;
+  background-color: #ffffff;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+/*メニューhover*/
+.menu-contents:hover {
+  background-color: #e7e6e6;
+}
+
+.menu-icon {
+  margin-left: 5%;
+  width: 12%;
+}
+
+/*[検索]*/
+#search-window {
+  position: relative;
+  z-index: 5;
+  display: none;
+  margin-left: 10%;
+  padding: 5% 10%;
+  width: calc(100% + 250%);
+  text-align: left;
+  border: 0.2rem solid #000000;
+  border-radius: 0.2rem;
+  box-shadow: 0.2rem 0.2rem 0.5rem #444444;
+  background-color: #ffffff;
+}
+
+.search-nav {
+  margin: 1.5% 0;
+}
+
+#key-word {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  appearance: none;
+  padding: 1.5%;
+  width: 30%;
+  border: 0.25rem solid #000000;
+  border-radius: 0.3rem;
+  color: #000000;
+  background-color: #f0f0f0;
+  cursor: pointer;
+}
+
+#search-submit {
+  margin-left: 0.5%;
+}
+
+/*[書き込み]*/
+#insert-window {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  appearance: none;
+  position: relative;
+  z-index: 5;
+  display: none;
+  margin-left: 10%;
+  padding: 10%;
+  width: calc(100% + 250%);
+  text-align: left;
+  border: 0.2rem solid #000000;
+  border-radius: 0.2rem;
+  box-shadow: 0.2rem 0.2rem 0.5rem #444444;
+  background-color: #ffffff;
+}
+
+#insert-nav {
+  margin: 1.5% 0;
+}
+
+#username-lead,
+#category-lead,
+#message-lead {
+  display: flex;
+  align-items: center;
+  margin: 1% auto 0;
+  padding-left: 1%;
+  font-size: 1.2rem;
+}
+
+#username-insert {
+  padding-left: 1.5%;
+  font-weight: bold;
+}
+
+#category-insert {
+  display: flex;
+  margin-left: 0.5%;
+}
+
+#category {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  appearance: none;
+  padding: 0.5% 1%;
+  width: 20%;
+  border: 0.2rem solid #000000;
+  border-radius: 0.2rem;
+  background-color: #f0f0f0;
+  cursor: pointer;
+}
+
+#category option {
+  cursor: pointer;
+}
+
+#message-insert {
+  display: flex;
+  margin-left: 0.5%;
+}
+
+#message {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  appearance: none;
+  margin-bottom: 3%;
+  padding: 0.5% 1%;
+  width: 90%;
+  font-size: 1.6rem;
+  border: 0.2rem solid #000000;
+  border-radius: 0.2rem;
+  background-color: #f0f0f0;
+  cursor: pointer;
+}
+
+/*エラーコメント*/
+#err-category,
+#err-message {
+  margin-left: 2%;
+  font-weight: bold;
+  color: #ff0000;
+}
+
+#insert-submit {
+  margin-left: 0.5%;
+}
+
+/*=[ボタン]=*/
+.reg-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 4rem;
+  width: 20rem;
+  letter-spacing: 0.5rem;
+  font-size: 1.6rem;
+  font-weight: bold;
+  text-shadow: 0.2rem 0.2rem 0.5rem #000000;
+  border: 0.15rem solid #0dff00;
+  box-shadow: 0.3rem 0.3rem 0.5rem #000000cc;
+  border-radius: 0.3rem;
+  color: #f0f0f0;
+  background: linear-gradient(to top, #1bff81, #5cffa2);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+/*btn hover*/
+.reg-btn.reg-btn-hover {
+  margin: 0.5% 0 0;
+  box-shadow: 0.2rem 0.2rem 0.3rem #000000cc;
+}
+
+.link-txt-outer {
+  width: 40%;
+  text-align: center;
+}
+
+.link-txt {
+  display: block;
+  margin: 3% auto;
+  width: 60%;
+  letter-spacing: 0.2rem;
+  font-weight: bold;
+  text-shadow: 0.2rem 0.2rem 0.2rem #000000;
+  border-bottom: 0.2rem solid #f0f0f0;
+  color: #f0f0f0;
+  cursor: pointer;
+}
+
+.fla-nav {
+  display: block;
+  margin: 3% auto;
+  width: 80%;
+  letter-spacing: 0.2rem;
+  font-weight: bold;
+  text-shadow: 0.2rem 0.2rem 0.2rem #000000;
+  color: rgb(240, 240, 240);
+  cursor: pointer;
+  animation: flash-nav 1.5s linear infinite;
+}
+/*flash_nav*/
+@keyframes flash-nav {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+/*===[フッター]===*/
+footer {
+  position: absolute;
+  opacity: 0;
+  z-index: 1;
+  bottom: -7%;
+  display: flex;
+  align-items: center;
+  height: 0;
+  width: 100%;
+  background: linear-gradient(to top, #1bff81, #dfffed);
+}
+
+/*copyright*/
+#copy-right {
+  position: absolute;
+  right: 0;
+  padding: 1% 5% 0;
+  font-size: 0.8rem;
+  font-family: "Raleway", sans-serif;
+}

@@ -1,0 +1,426 @@
+@charset "UTF-8";
+/*
+sowsow
+commom_mobile
+=====[rgb]=======
+ロゴ グリーン
+rgb(27, 255, 129)
+=================
+*/
+
+/*===[デフォルトcss]===*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  letter-spacing: 1; /*文字間*/
+  line-height: normal; /*行間*/
+  border: none;
+  font-weight: normal;
+}
+
+html {
+  font-size: 62.5%; /*サイズリセット*/
+  font-family: "Arial Rounded MT Bold", "Hiragino Kaku Gothic ProN",
+    "ヒラギノ角ゴ ProN W3";
+}
+
+body {
+  height: 100%;
+  font-size: 1.0em; /*フォントサイズ*/
+}
+
+img {
+  display: block;
+  object-fit: cover;
+  text-decoration: none;
+  border: none;
+}
+
+a,
+button {
+  display: block;
+  text-decoration: none;
+  border: none;
+  color: #000000;
+}
+
+input,
+select,
+textarea {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: 0.1rem solid #000000;
+  color: #000000;
+  background-color: #f0f0f0;
+}
+
+ol,
+ul {
+  list-style: none;
+  word-wrap: break-word;
+  line-height: 1.5;
+}
+
+/*[main_wrapper(背景)]*/
+#main-wrapper {
+  position: fixed;
+  z-index: 0;
+  overflow: hidden;
+  display: flex;
+  height: 100%;
+  width: 100vw;
+  background-image: url(../../images/mt.fuji_mobile.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+/*===[ヘッダー]===*/
+header {
+  position: absolute;
+  opacity: 0;
+  z-index: 1;
+  top: -7%;
+  display: flex;
+  align-items: center;
+  height: 7%;
+  width: 100%;
+  background: linear-gradient(#59ffa4, #dfffed);
+}
+
+/*メニューボタン*/
+#menu-btn {
+  position: relative;
+  margin-top: 0.5%;
+  margin-left: 2%;
+  padding: 5%;
+  border: 0.2rem solid #000000;
+  border-radius: 0.4rem;
+  background-color: #ffffff;
+}
+/*ボタン内側*/
+.menu-line {
+  position: absolute;
+  z-index: 20;
+  left: 25%;
+  display: inline-block;
+  height: 0.3rem;
+  background-color: #000000;
+  transition: 0.4s;
+}
+.menu-line:nth-of-type(1) {
+  top: 30%;
+  width: 50%;
+}
+.menu-line:nth-of-type(2) {
+  top: 60%;
+  width: 50%;
+}
+/*ボタンクリックで「×」に*/
+.menu-line:nth-of-type(1).active {
+  top: 30%;
+  left: 26%;
+  transform: translateY(6px) rotate(-45deg);
+  width: 50%;
+}
+.menu-line:nth-of-type(2).active {
+  top: 62%;
+  left: 26%;
+  transform: translateY(-6px) rotate(45deg);
+  width: 50%;
+}
+
+#header-logo-outer {
+  margin-left: 2%;
+  width: 18%;
+}
+
+.header-icon {
+  width: 100%;
+}
+
+#welcome-user-outer {
+  position: absolute;
+  right: 0;
+  display: flex;
+  justify-content: right;
+  align-items: baseline;
+  padding-right: 3%;
+  white-space: nowrap;
+  font-size: 1rem;
+  text-shadow: 0.1rem 0.1rem 0.2rem #444444;
+}
+
+#welcome-user {
+  padding: 0 5%;
+  font-size: 1.2rem;
+  text-shadow: 0.1rem 0.1rem 0.2rem #444444;
+}
+
+#login-mode {
+  margin: 0 auto;
+  width: 70%;
+  letter-spacing: 0.3rem;
+  font-size: 2rem;
+  text-shadow: 0.1rem 0.1rem 0.2rem #444444;
+  border-bottom: 0.15rem solid #1bff81;
+}
+
+/*=[サイドコンテンツ(モバイル)]=*/
+#side-container-m {
+  position: absolute;
+  z-index: 10;
+  top: -8%;
+  left: 0;
+  display: none;
+  height: 0;
+  width: 100vw;
+  transition: all 0.3s ease-in-out;
+}
+#side-container-m.active {
+  height: 108%;
+}
+
+/*=[メニュー]=*/
+#menu-outer {
+  padding-top: 20%;
+  height: 100%;
+  text-align: center;
+  background-color: #ffffffe6;
+}
+
+.menu-contents-m {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 9% 3%;
+  letter-spacing: 0.1em;
+  font-size: 2.4rem;
+  font-family: "Raleway", sans-serif;
+}
+
+.menu-icon {
+  margin-left: 8%;
+  width: 8%;
+}
+
+#close-btn-search {
+  margin: 10% auto;
+  width: 100%;
+  text-align: right;
+}
+
+#close-btn-insert {
+  margin: 5% auto;
+  width: 100%;
+  text-align: right;
+}
+
+.close-icon {
+  margin-left: 90%;
+  width: 10%;
+}
+
+/*モバイルではモーダルメニュー*/
+#side-container {
+  position: fixed;
+  z-index: 100;
+  overflow-y: scroll;
+  top: 0;
+  left: 0;
+  display: none;
+  height: 100%;
+  width: 100vw;
+  background-color: #000000;
+}
+
+/*[検索]*/
+#search-window {
+  position: absolute;
+  top: 0;
+  z-index: 110;
+  display: none;
+  padding: 15% 10%;
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  box-shadow: 0.2rem 0.2rem 0.5rem #444444;
+  background-color: #ffffff;
+}
+
+.search-nav {
+  margin: 5% 2%;
+  width: 95%;
+}
+
+#key-word {
+  margin-top: 5%;
+  padding: 3% 5%;
+  width: 90%;
+  font-size: 1.4rem;
+  border: 0.1rem solid #000000;
+}
+
+#search-submit {
+  letter-spacing: 1.4rem;
+  margin-top: 20%;
+}
+
+/*[書き込み]*/
+#insert-window {
+  position: absolute;
+  top: 0;
+  z-index: 110;
+  display: none;
+  padding: 15% 10%;
+  height: 150%;
+  width: 100%;
+  text-align: left;
+  background-color: #ffffff;
+  box-shadow: 0.2rem 0.2rem 0.5rem #444444;
+}
+
+#insert-nav {
+  padding: 1.5% 3%;
+}
+
+#username-lead,
+#category-lead,
+#message-lead {
+  display: flex;
+  margin: 5% auto 1%;
+  padding-left: 2%;
+  width: auto;
+  text-align: left;
+  border-bottom: 0.1rem solid #1bff81;
+}
+
+#username-insert {
+  padding: 1.5% 2.5%;
+  font-size: 1.4rem;
+}
+
+#category-insert {
+  padding: 1.5% 2.5%;
+}
+
+#category {
+  margin-top: 1.5%;
+  padding: 1% 2%;
+  width: 100%;
+  font-size: 1.4rem;
+  border: 0.1rem solid #000000;
+}
+
+#message-insert {
+  margin-top: 2%;
+  margin-left: 2%;
+  width: 96%;
+}
+
+#message {
+  margin-top: 1.5%;
+  padding: 2%;
+  height: calc(1.5em * 5);
+  width: 100%;
+  letter-spacing: 0.1em;
+  font-size: 1.4rem;
+  border: 0.1rem solid #000000;
+}
+
+/*エラーコメント*/
+#err-category,
+#err-message {
+  margin: auto 1.5%;
+  font-weight: bold;
+  color: #ff0000;
+}
+
+#insert-submit-outer {
+  margin-top: 20%;
+  text-align: center;
+}
+
+#insert-submit {
+  letter-spacing: 0.5rem;
+}
+
+/*=[ボタン]=*/
+.reg-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  padding: 2% 0;
+  width: 60%;
+  font-size: 1.4rem;
+  font-weight: bold;
+  text-shadow: 0.2rem 0.2rem 0.5rem #000000;
+  border: 0.15rem solid #0dff00;
+  border-radius: 0.3rem;
+  box-shadow: 0.2rem 0.2rem 0.5rem #000000cc;
+  color: #ffffff;
+  background: linear-gradient(to top, #1bff81, #5cffa2);
+  /*※『letter-spacing』はそれぞれで指定*/
+}
+
+.link-txt-outer {
+  width: 40%;
+  text-align: center;
+}
+
+.link-txt {
+  display: block;
+  margin: 3% auto;
+  width: 100%;
+  letter-spacing: 0.1rem;
+  text-shadow: 0.2rem 0.2rem 0.2rem #000000;
+  border-bottom: 0.1rem solid #ffffff;
+  color: #ffffff;
+}
+
+.fla-nav {
+  display: block;
+  text-align: center;
+  letter-spacing: 0.1rem;
+  text-shadow: 0.2rem 0.2rem 0.2rem #000000;
+  color: #ffffff;
+  animation: flash-nav 1.5s linear infinite;
+}
+/*flash_nav*/
+@keyframes flash-nav {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+/*===[フッター]===*/
+footer {
+  position: absolute;
+  z-index: 1;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  height: 0;
+  width: 100%;
+  background: linear-gradient(to top, #1bff81, #dfffed);
+}
+
+/*copyright*/
+#copy-right {
+  position: absolute;
+  right: 0;
+  padding: 1% 5% 0;
+  letter-spacing: 0.3rem;
+  font-size: 0.6rem;
+  font-family: "Raleway", sans-serif;
+}

@@ -1,0 +1,173 @@
+@charset "UTF-8";
+/*
+sowsow
+other_middle
+=====[rgb]=======
+ロゴ グリーン
+rgb(27, 255, 129)
+=================
+*/
+
+/*===[insert.php]===*/
+#insert-ol {
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #0000004d;
+}
+
+#insert-result-outer {
+  position: relative;
+  z-index: 1;
+  top: 10%;
+  left: 5%;
+  padding: 5%;
+  width: 90%;
+  text-align: center;
+  background-color: #ffffff;
+}
+
+#insert-title {
+  margin: 10%;
+  text-align: center;
+  text-shadow: 0.1rem 0.1rem 0.2rem #444444;
+  border-bottom: 0.1rem double #1bff81;
+}
+
+#insert-result {
+  margin: 10% auto;
+  padding: 3%;
+  width: 90%;
+  text-align: left;
+  border: 0.1rem solid #1e1a1a;
+}
+
+#insert-result-head {
+  display: flex;
+  padding: 1% 0;
+  width: 100%;
+}
+
+#insert-result-user-outer {
+  display: flex;
+  align-items: center;
+}
+
+#insert-result-user {
+  word-break: break-all;
+  font-weight: bold;
+}
+
+#insert-result-date {
+  font-size: 1.4rem;
+}
+
+#insert-result-message {
+  padding: 5% 1%;
+  word-break: break-all;
+  font-size: 1.8rem;
+}
+
+#insert-result-category {
+  font-size: 1.4rem;
+}
+
+#insert-nav-outer {
+  width: 100%;
+  text-align: center;
+}
+
+#insert-nav-txt {
+  margin: 5% auto;
+  letter-spacing: 0.1rem;
+  font-weight: bold;
+}
+
+#insert-err-txt {
+  letter-spacing: 0.1rem;
+  font-weight: bold;
+  color: #ff0000;
+}
+
+#return-main {
+  position: absolute;
+  bottom: -20%;
+  left: 0;
+  width: 100%;
+  text-align: center;
+}
+
+/*===[user_edit.php]===*/
+#edit-container {
+  position: relative;
+  z-index: 1;
+  margin: 0 auto;
+  width: 90%;
+}
+
+#edit-inner {
+  display: inline;
+  margin: 0 auto;
+}
+
+#account-list-head {
+  display: none;
+}
+
+#result-window {
+  margin-top: 5%;
+}
+
+.account-result-list {
+  margin: auto;
+  width: 95%;
+  border-collapse: collapse;
+}
+
+.account-result-form {
+  display: flex;
+  align-items: center;
+  margin: 5% auto;
+  padding: 1%;
+  border: 0.1rem solid #1e1a1a;
+  background-color: #ffffff;
+}
+
+.account-no {
+  width: 10%;
+  text-align: center;
+  border: 0.1rem solid #1e1a1a;
+}
+
+.account-id {
+  padding: 1% 2%;
+  width: 50%;
+  font-size: 1.8rem;
+}
+
+.account-admin {
+  padding: 1% 2%;
+  width: 10%;
+  text-align: center;
+}
+
+.admin-select {
+  padding: 5% 10%;
+  text-align: center;
+}
+
+.edit-btn {
+  margin-left: 5%;
+  width: 7%;
+  box-shadow: 0.1rem 0.2rem 0.3rem #444444;
+  border: 0.1rem solid #000000;
+  border-radius: 0.5rem;
+  background-color: #e4e4e4;
+}
+
+.edit-icon {
+  width: 100%;
+}
